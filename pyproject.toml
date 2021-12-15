@@ -8,6 +8,7 @@ authors = ["Aydar Gimadiev <gima.aydar@gmail.com>"]
 python = "^3.9"
 Django = "3"
 psycopg2-binary = "2.8.6"
+django-crispy-forms = "^1.13.0"
 
 [tool.poetry.dev-dependencies]
 
