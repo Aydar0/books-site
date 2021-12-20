@@ -11,6 +11,11 @@ class Book(models.Model):
     price = models.DecimalField(verbose_name="Price", max_digits=6, decimal_places=2)
     cover = models.ImageField(upload_to='covers/', blank=True)
 
+    class Meta:
+        permissions = [
+            ('read_all_books_status', 'Can read all books'),
+        ]
+
     def __str__(self):
         return self.title
 
