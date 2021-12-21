@@ -16,11 +16,12 @@ class BookListView(LoginRequiredMixin, ListView):
 
 
 class BookDetailView(LoginRequiredMixin, PermissionRequiredMixin, DetailView):
-    model = Book
+    queryset = Book.objects.all()
     template_name = 'books/book_detail.html'
     context_object_name = 'book'
     login_url = 'account_login'
     permission_required = 'books.read_all_books_status'
+
 
 
 class SearchResultListView(ListView):
